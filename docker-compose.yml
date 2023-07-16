@@ -1,0 +1,11 @@
+version: '3'
+services:
+  fast-todo:
+    build: .
+    volumes:
+      - .dockervenv:/src/.venv
+      - .:/src
+    ports:
+      - 8000:8000
+    environment:
+      - WATCHFILES_FORCE_POLLING=true
