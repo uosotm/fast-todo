@@ -10,7 +10,12 @@ packages = [{include = "fast_todo"}]
 python = "^3.11"
 fastapi = "^0.100.0"
 uvicorn = {extras = ["standard"], version = "^0.23.0"}
+sqlalchemy = "^2.0.19"
+pymysql = "^1.1.0"
 
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.7.0"
 
 [build-system]
 requires = ["poetry-core"]
