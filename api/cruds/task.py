@@ -14,7 +14,7 @@ def get_task(db: Session, task_id: int) -> task_model.Task | None:
 
 
 # TODO: この返り値はモデルの型を使うことは出来ないのか？
-def get_tasks_with_done(db: Session) -> list[tuple[int, str, bool]]:
+def get_tasks_with_done(db: Session) -> list[task_model.Task]:
     result: Result = db.execute(
         select(
             task_model.Task.id,

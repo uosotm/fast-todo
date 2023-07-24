@@ -9,6 +9,7 @@ class Task(TaskBase):
     id: int
     done: bool = Field(False, description="完了フラグ")
 
+    model_config = ConfigDict(from_attributes=True)
 
 class TaskCreate(TaskBase):
     pass
